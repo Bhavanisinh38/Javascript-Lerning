@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Site Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site Title -->
+    <title>Form Event</title>
+
+    <!-- Site Css Links -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    
+</head>
+<body>
+    
+
+    <div>
+        <span id="this-m">00</span>
+        <span>:</span>
+        <span id="this-s">00</span>
+        <button id="idd" onclick="sf()"></button>
+    </div>
+
+    
+
+    <!-- Site Javascript -->
+    <script>
+        let lets = 0;
+        let idd = setTimeout(check, 5000);
+
+        function sf() {
+            clearTimeout(idd)
+        }
+        function check() {
+            document.getElementById("this-s").innerHTML = "vkjsdbkjvw viudvvbdiuvweiu";
+        }
+    </script>
+</body>
+</html>

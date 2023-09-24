@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Nunito', sans-serif;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: bisque;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body>section {
+        min-height: 150px;
+        flex: 0 0 50%;
+        padding: 10px;
+    }
+
+    body>section>div {
+        border: 2px dashed black;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    body>section>div>.haeding {
+        border-bottom: 2px dashed black;
+        text-align: center;
+        padding: 10px;
+        padding-top: 0;
+        margin-bottom: 5px;
+    }
+
+    body>section>div>p {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+
+    button {
+        display: inline-block;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 10px 0px 0px 0;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    button span {
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 15px;
+        padding: 8px 20px;
+        background-color: #ffffff;
+        border: 1px solid #dfdfdf;
+        color: #525252;
+        transition-duration: .15s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        text-align: center;
+        box-shadow: 0 4px 0 #dfdfdf;
+        top: -5px;
+        font-family: 'Mukta Vaani', sans-serif !important;
+    }
+
+    button:hover span {
+        color: #dd1d23;
+        border-color: #dd1d23;
+        box-shadow: 0 4px 0 #dd1d23;
+    }
+
+    button:active span {
+        color: #dd1d23;
+        border-color: #dd1d23;
+        box-shadow: 0 4px 0 #dd1d23;
+        -webkit-box-shadow: 0 0px 0 #cddc39;
+        box-shadow: 0 0px 0 #cddc39;
+        top: 0px;
+    }
+
+
+    @media (max-width:992px) {
+        body>section {
+            min-height: 150px;
+            flex: 0 0 100%;
+            padding: 10px;
+        }
+    }
+</style>
+
+<body><!-- onscroll="namea()" -->
+
+<section class="time pass" id="vskuvs" data-time="csab">
+    <div>
+        <a id="find-me" href=""></a>
+        <div class="haeding">HTML tag In JS</div>
+        <div class="name"></div>
+        <pre>
+            let name = "<i>Bhavanisinh Parmar</i>"
+            document.getElementsByClassName("name")[0].innerHTML = name;
+            document.write(document.getElementsByClassName("name")[0].innerHTML);
+            document.write(document.getElementsByClassName("name")[0].innerText);
+        </pre>
+        <script>
+            // let name = "<i>Bhavanisinh Parmar</i>"
+            // document.getElementsByClassName("name")[0].innerHTML = name;
+            // document.write(document.getElementsByClassName("name")[0].innerHTML);
+            // document.write(document.getElementsByClassName("name")[0].innerText);
+        </script>
+    </div>
+</section>
+
+<section class="time pass" id="vskuvs2" data-time="csab2">
+    <div>
+        <div class="haeding">Data Type</div>
+        <p>let datatype = "hello World"; ---- String</p>
+        <p>let datatype = "123456"; --- String</p>
+        <p>let datatype = 132; --- Number</p>
+        <p>let datatype = true; --- boolean</p>
+        <p>let datatype = false; --- Boolean</p>
+        <p>let datatype = ["hello","world",12,"this is a array"]; --- Array</p>
+        <p>let datatype = {Maths: 100,english:100}; ----> Object</p>
+        <p>let datatype = {fname: "Hello", lname: "World"}; --- Object</p>
+        <p>let datatype = null; --- null</p>
+        <p>let datatype; --- undefined</p>
+        <p>console.log(datatype);</p>
+        <p>console.log(typeof datatype);</p>
+        <script>
+            // let datatype = "hello World";
+            // let datatype = "123456";
+            // let datatype = 132;
+            // let datatype = true;
+            // let datatype = false;
+            // let datatype = ["hello","world",12,"this is a array"];
+            // let datatype = {Maths: 100,english:100};
+            // let datatype = {fname: "Hello", lname: "World"};
+            // let datatype = null;
+            // let datatype;
+            // console.log(datatype);
+            // console.log(typeof datatype);
+        </script>
+    </div>
+</section>
+
+<section class="time pass" id="vskuvs1" data-time="csab1">
+    <div>
+        <div class="haeding">Arethmetic optators</div>
+        <p>let oper1 = 21;</p>
+        <p>let oper2 = 3;</p>
+        <p>console.log("Addition", oper1 + oper2); ---- 24</p>
+        <p>console.log("Subtraction", oper1 - oper2); ---- 18</p>
+        <p>console.log("Multiplication", oper1 * oper2); ---- 63</p>
+        <p>console.log("Exponentiation", oper1 ** oper2); ---- 9261</p>
+        <p>console.log("Division", oper1 / oper2); ---- 7
+        <p>
+        <p>console.log("Modulus (Remainder)", oper1 % oper2); --- 0</p>
+        <p>oper1++; --- + 1</p>
+        <p>console.log("Increment", oper1); --- 22</p>
+        <p>console.log("Increment", oper1 + oper2); --- 25</p>
+        <p>oper1--; --- -1</p>
+        <p>console.log("Decrement", oper1); --- 21</p>
+        <p>console.log("Decrement", oper1 - oper2); --- 18</p>
+        <script>
+            // let oper1 = 21;
+            // let oper2 = 3;
+            // console.log("Addition", oper1 + oper2);
+            // console.log("Subtraction", oper1 - oper2);
+            // console.log("Multiplication", oper1 * oper2);
+            // console.log("Exponentiation", oper1 ** oper2);
+            // console.log("Division", oper1 / oper2);
+            // console.log("Modulus (Remainder)", oper1 % oper2);
+            // oper1++;
+            // console.log("Increment", oper1);
+            // console.log("Increment", oper1 + oper2);
+            // oper1--;
+            // console.log("Decrement", oper1);
+            // console.log("Decrement", oper1 - oper2);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Assignment operators</div>
+        <p>let oper1 = 21;</p>
+        <p>let oper2 = 3;</p>
+        <p>console.log("+=", oper1 += oper2); ---- 24</p>
+        <p>console.log("-+", oper1 -= oper2); ---- 18</p>
+        <p>console.log("*=", oper1 *= oper2); ---- 63</p>
+        <p>console.log("/=", oper1 /= oper2); ---- 7</p>
+        <p>console.log("%=", oper1 % oper2); ---- 0</p>
+        <p>console.log("**=", oper1 ** oper2); ---- 9261</p>
+
+        <script>
+            // let oper1 = 21;
+            // let oper2 = 3;
+            // console.log("+=", oper1 += oper2);
+            // console.log("-+", oper1 -= oper2);
+            // console.log("*=", oper1 *= oper2);
+            // console.log("/=", oper1 /= oper2);
+            // console.log("%=", oper1 % oper2);
+            // console.log("**=", oper1 ** oper2);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Comparison Operators</div>
+        <p>let comp1 = 08;</p>
+        <p>let comp2 = 07;</p>
+        <p>console.log("operators ==", comp1 == comp2); --- false</p>
+        <p>console.log("operators ===", comp1 === comp2); --- false</p>
+        <p>console.log("operators !=", comp1 != comp2); --- true</p>
+        <p>console.log("operators !==", comp1 !== comp2); --- true</p>
+        <p>console.log("operators <", comp1 < comp2); --- false</p>
+                <p>console.log("operators >", comp1 > comp2); --- true</p>
+                <p>console.log("operators <=", comp1 <=comp2); --- false</p>
+                        <p>console.log("operators >=", comp1 >= comp2); --- true</p>
+                        <script>
+        // let comp1 = 8;
+        // let comp2 = 7;
+        // console.log("operators ==", comp1 == comp2);
+        // console.log("operators ===", comp1 === comp2);
+        // console.log("operators !=", comp1 != comp2);
+        // console.log("operators !==", comp1 !== comp2);
+        // console.log("operators <", comp1 < comp2);
+        // console.log("operators >", comp1 > comp2);
+        // console.log("operators <=", comp1 <= comp2);
+        // console.log("operators >=", comp1 >= comp2);
+
+                        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Logical Operators &&(end), ||(or), not(!)</div>
+        <p>console.log(true && true); --- true</p>
+        <p>console.log(true && false); --- false</p>
+        <p>console.log(false && true); --- false</p>
+        <p>console.log(false && false); --- false</p>
+        <p>console.log(true || true); --- true</p>
+        <p>console.log(true || false); --- true</p>
+        <p>console.log(false || true); --- true</p>
+        <p>console.log(false || false); --- false</p>
+        <p>console.log(!false); --- true</p>
+        <p>console.log(!true); --- false</p>
+        <script>
+            // console.log(true && true);
+            // console.log(true && false);
+            // console.log(false && true);
+            // console.log(false && false);
+
+            // console.log(true || true);
+            // console.log(true || false);
+            // console.log(false || true);
+            // console.log(false || false);
+
+            // console.log(!false);
+            // console.log(!true);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Console Api</div>
+        <p>console.log("this is a console log Api");</p>
+        <p>console.log([1,2,3]);</p>
+        <p>console.table([1,2,3]);</p>
+        <p>console.error("this is a console error Api");</p>
+        <p>console.warn("this is a console warn Api");</p>
+        <p>console.warn("this is a console warn Api");</p>
+        <p>console.info("thia is a console info Api");
+        <p>console.time("test");</p>
+        <p>console.timeEnd("test");</p>
+        <p>console.clear();</p>
+        <p>Many More console Api Search</p>
+        <script>
+            // console.log("this is a console log Api");
+            // console.log([1,2,3]);
+            // console.table([1,2,3]);
+            // console.error("this is a console error Api");
+            // console.warn("this is a console warn Api");
+            // console.info("thia is a console info Api");
+            // console.time("test");
+            // console.timeEnd("test");
+            // console.clear();
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">only If Statement</div>
+        <p>let ifs1 = 10;</p>
+        <p>let ifs2 = "10";</p>
+        <p>if (ifs1 === ifs2) {<br>console.log("false Condition");<br>} --- not print in console</p>
+        <p>if (ifs1 == ifs2) {<br>console.log("True Condition");<br>} --- print in console</p>
+        <script>
+            // let ifs1 = 10;
+            // let ifs2 = "10";
+            // if (ifs1 === ifs2) {
+            //     console.log("True Condition");
+            // }
+            // if (ifs1 == ifs2) {
+            //     console.log("True Condition");
+            // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">If else Statement</div>
+        <p>let ifes1 = 100;</p>
+        <p>let ifes2 = 51;</p>
+        <p>if (ies1 >= ies2) {<br>
+            console.log('ie condition is true');<br>
+            } else { --- condition true print this<br>
+            console.log('ie condition is false');<br>
+            } --- condition false print this</p>
+        <script>
+            // let ifes1 = 100;
+            // let ifes2 = 51;
+            // if (ies1 >= ies2) {
+            //     console.log('ie condition is true')
+            // } else {
+            //     console.log('ie condition is false')
+            // }   
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">If else if Statement</div>
+        <p>let ifeifs = prompt("Enter Your %");</p>
+        <p>if (ifeifs > 80) {<br>
+            console.log("your % is 80% up");<br>
+            } else if (ifeifs <= 33 && ifeifs>= 80 ) {<br>
+                console.log("your % is 33% to 80% under");<br>
+                } else if (ifeifs = 33) {<br>
+                console.log("your % is 33% less");<br>
+                } else {<br>
+                console.log("Enter valid value");<br>
+                }</p>
+        <script>
+            // let ifeifs = prompt("Enter Your %");
+            // if (ifeifs > 80) {
+            //     console.log("your % is 80% up " + ifeifs);
+            // } else if (ifeifs >= 33 && ifeifs <= 80 ) {
+            //     console.log("your % is 33% to 80% under " + ifeifs);
+            // } else if (ifeifs < 33) {
+            //     console.log("your % is 33% less " + ifeifs);
+            // } else {
+            //     console.log("Enter valid value "  + ifeifs);
+            // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Conditional Ternary</div>
+        <p>let cts = 100;</p>
+        <p>(cts > 100)? a = 'true' : a = 'false';<br>
+            console.log(a);</p>
+        <p>b = (cts == 100)? 'true' : 'false';<br>
+            console.log(b);</p>
+        <p>c ="c value is" + (cts == 100? 'true' : 'false');<br>
+            console.log(c);</p>
+        <script>
+            // let cts = 100;
+            // (cts > 100)? a = 'true' : a = 'false';
+            // console.log(a);
+            // let b = (cts == 100)? 'true' : 'false';
+            // console.log(b);
+            // let c ="c value is " + (cts == 100? 'true' : 'false');
+            // console.log(c);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Switch Case</div>
+        <p>let day = 0;</p>
+        <P>switch (day) {<br>
+            case 0: console.log("Today is su"); alert("Today is su"); break;<br>
+            case 1: console.log("Today is mo"); alert("Today is mo"); break;<br>
+            case 2: console.log("Today is ta"); alert("Today is ta"); break;<br>
+            case 3: console.log("Today is we"); alert("Today is we"); break;<br>
+            case 4: console.log("Today is th"); alert("Today is th"); break;<br>
+            case 5: console.log("Today is fr"); alert("Today is fr"); break;<br>
+            case 6: console.log("Today is sa"); alert("Today is sa"); break;<br>
+            default: console.log("Enter valid Number"); break;<br>
+            }</p>
+        <script>
+            // let day = 0;
+            // switch (day) {
+            //     case 0:
+            //     console.log("Today is su");
+            //     alert("Today is su");
+            //         break;
+            //     case 1:
+            //     console.log("Today is mo");
+            //     alert("Today is mo");
+            //         break;
+            //     case 2:
+            //     console.log("Today is ta");
+            //     alert("Today is ta");
+            //         break;
+            //     case 3:
+            //     console.log("Today is we");
+            //     alert("Today is we");
+            //         break;
+            //     case 4:
+            //     console.log("Today is th");
+            //     alert("Today is th");
+            //         break;
+            //     case 5:
+            //     console.log("Today is fr");
+            //     alert("Today is fr");
+            //         break;
+            //     case 6:
+            //     console.log("Today is sa");
+            //     alert("Today is sa");
+            //         break;
+            //     default:
+            //     console.log("Enter valid Number");
+            //         break;
+            // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Confrim box</div>
+        <p>let confrim = confirm("This Is confrim box?");</p>
+        <P>if (confrim) {<br>
+            alert("You are right");<br>
+            } else {<br>
+            alert("sorry, You are wrong");<br>
+            }</p>
+        <script>
+        //   let confrim = confirm("This Is confrim box?");
+        //   if (confrim) {
+        //     alert("You are right");
+        //   } else {
+        //     alert("sorry, You are wrong");
+        //   }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">function</div>
+        <p>function textfunction() {<br>
+            alert("thia is my first function script");<br>
+            }</p>
+        <p>textfunction();</p>
+        <script>
+            // function textfunction() {
+            //     alert("thia is my first function script");
+            // }
+            // textfunction();
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">function With Perameters</div>
+        <p>function fwp(pera1, pera2) {<br>
+            console.log(pera1 + pera2);<br>
+            alert(pera1 + pera2);<br>
+            }</p>
+        <p>fwp(08, 01);</p>
+        <p>fwp(08, 02);</p>
+        <br>
+        <p>function fnp( fnp = "bhavanisinh", lnp="Parmar") {<br>
+            console.log(fnp + " " + lnp);<br>
+            alert(fnp + " " + lnp);<br>
+            }</p>
+        <p>fnp("Time", "Pass");</p>
+        <p>fnp("Time");</p>
+        <p>fnp();</p>
+
+        <p>Answer available in console option & alert box </p>
+        <script>
+            // function fwp(pera1, pera2) {
+            //     console.log(pera1 + pera2);
+            //     alert(pera1 + pera2);
+            // }
+            // fwp(08, 01);
+            // fwp(08, 02);
+
+            // function fnp( fnp = "bhavanisinh", lnp="Parmar") {
+            //     console.log(fnp + " " + lnp);
+            //     alert(fnp + " " + lnp);
+            // }
+            // fnp("Time", "Pass");
+            // fnp("Time");
+            // fnp();
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">function With Return Value</div>
+        <p>function fwe(fwe1, few2, few3, few4, few5) {<br>
+            let feesum = fwe1 + few2 + few3 + few4 + few5;<br>
+            return feesum;<br>
+            }</p>
+        <p>let fwetotole = fwe(88, 85, 84, 99, 85);</p>
+        <p>console.log(fwetotole);</p>
+
+        <br>
+
+        <p>function fwep(fwep1) {<br>
+            let fwepfinel = fwep1 * 100 / 500;<br>
+            return fwepfinel;<br>
+            // console.log(fwepfinel);<br>
+            }</p>
+        <p>let fwepar = fwep(fwetotole);</p>
+        <p>console.log(fwepar);</p>
+        <p>// fwep(fwetotole);</p>
+
+        <p>Answer available in console option & alert box </p>
+        <script>
+            // function fwe(fwe1, few2, few3, few4, few5) {
+            //     let feesum = fwe1 + few2 + few3 + few4 + few5;
+            //     return feesum;
+            // }
+
+            // function fwep(fwep1) {
+            //     let fwepfinel = fwep1 * 100 / 500;
+            //     return fwepfinel;
+            //     // console.log(fwepfinel);
+            // }
+
+            // let fwetotole = fwe(88, 85, 84, 99, 85);
+            // console.log(fwetotole);
+            // // alert(fwetotole);
+
+            // let fwepar = fwep(fwetotole);
+            // console.log(fwepar);
+
+            // // fwep(fwetotole);
+
+        </script>
+    </div>
+</section>
+
+<!-- <section>
+    <div>
+        <div class="haeding">Events</div>
+        <button onclick="namea()"><span>Click Me</span></button>
+        <button ondblclick="namea()"><span>double Click Me</span></button>
+        <button oncontextmenu="namea()"><span>right Click Me</span></button>
+        <button onmouseenter="namea()"><span>mouse enter</span></button>
+        <button onmouseout="namea()"><span>mouse out</span></button>
+        <button onmousedown="namea()"><span>mouse down Click Me</span></button>
+        <button onmouseup="namea()"><span>mouse up Click Me</span></button>
+
+
+        <button onkeypress="namea()"><span>key press</span></button>
+        <button onkeyup="namea()"><span>key up</span></button>
+        <button onkeydown="namea()"><span>Key down</span></button>
+        <button onload="namea()"><span>windos Load</span></button>
+        <button onunload="namea()"><span>windos Unload</span></button>
+        <button onresize="namea()"><span>windos resize</span></button>
+        <button onscroll="namea()"><span>windos scroll</span></button>
+
+        <p>function namea(){<br>
+            alert("javascript:void(0)");<br>
+            }</p>
+        <script> 
+            // function namea(){
+            //     alert("javascript:void(0)");
+            // }
+        </script>
+    </div>
+</section> -->
+
+<section>
+    <div>
+        <div class="haeding">While loops</div>
+
+        <p>let wp = 1;<br>
+            while(wp <= 10){<br>
+                console.log("bhavanisinh" + wp);<br>
+                wp = wp +1;<br>
+                }</p><br>
+
+        <p>let wp = 10;<br>
+            while(wp >= 1){<br>
+            console.log("bhavanisinh" + wp);<br>
+            wp = wp - 1;<br>
+            }</p><br>
+
+
+        <script>
+            // let wp = 1;
+            // while(wp <= 10){
+            //     console.log("bhavanisinh" + wp);
+            //     wp = wp +1;
+            // }
+
+            // let wp = 10;
+            // while(wp >= 1){
+            //     console.log("bhavanisinh" + wp);
+            //     wp = wp - 1;
+            // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Do While loops</div>
+
+        <p>let dwp = 1;<br>
+            do {<br>
+            console.log("bhavanisinh" + dwp);<br>
+            dwp++;<br>
+            } while (dwp <= 10);</p>
+
+        <script>
+            // let dwp = 1;
+            // do {
+            //     console.log("bhavanisinh" + dwp);
+            //     dwp++;
+            // } while (dwp <= 10);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">For loops</div>
+
+            <p>for (let flp = 0; flp <= 10; flp++) {<br>
+                console.log("bhavanisinh" + flp);<br>
+            }</p><br>
+
+            <p>for (let flp = 10; flp >= 0; flp--) {<br>
+                console.log("bhavanisinh" + flp);<br>
+            }</p><br>
+
+            <p>for (let flp = 0; flp <= 10; flp++) {<br>
+                    if(flp == 5){<br>
+                        console.log("parmar" + flp);<br>
+                        break;<br>
+                        continue;<br>
+                    }<br>
+                console.log("bhavanisinh" + flp);<br>
+            }</p><br>
+
+            <p>for (let evennum = 0; evennum < 100; evennum++) {<br>
+                if (evennum % 2 == 0) {<br>
+                    console.log("even number is" + evennum);<br>
+                } else {<br>
+                        console.log("odd number is" + evennum);<br>
+                }<br>
+            }</p>
+
+        <script>
+            // for (let flp = 0; flp <= 10; flp++) {
+            //     console.log("bhavanisinh" + flp);
+            // }
+
+            // for (let flp = 10; flp >= 0; flp--) {
+            //     console.log("bhavanisinh" + flp);
+            // }
+
+            // for (let flp = 0; flp <= 10; flp++) {
+            //     if(flp == 5){
+            //         console.log("parmar" + flp);
+            //         break;
+            //    //   continue;
+            //     }
+            //     console.log("bhavanisinh" + flp);
+            // }
+
+            // for (let evennum = 0; evennum < 100; evennum++) {
+            //     if (evennum % 2 == 0) {
+            //         console.log("even number is" + evennum);
+            //     } else {
+            //         console.log("odd number is" + evennum);
+            //     }
+            // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Nested For loop</div>
+            <p>for (let nfl = 1; nfl <= 5; nfl++) {<br>
+                for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {<br>
+                    document.write(nfl2 +  " ");<br>
+                }<br>
+            }</p>
+            <br>
+
+            
+            <p>for (let nfl = 1; nfl <= 5; nfl++) {<br>
+                for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {<br>
+                    document.write(nfl +  " ");<br>
+                }<br>
+            }</p>
+            <br>
+
+
+            <p>for (let nfl = 5; nfl >= 1; nfl--) {<br>
+                for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {<br>
+                    document.write(nfl2 +  " ");<br>
+                }<br>
+            }</p>
+            <br>
+
+
+            <p>for (let nfl = 5; nfl >= 1; nfl--) {<br>
+                for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {<br>
+                    document.write(nfl +  " ");<br>
+                }<br>
+            }</p>
+            <br>
+        <script>
+            // for (let nfl = 1; nfl <= 5; nfl++) {
+            //     for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {
+            //         document.write(nfl2 +  " ");
+            //     }
+            //     document.write("<br>");
+            // }
+            // document.write("<br><br>");
+            
+            // for (let nfl = 1; nfl <= 5; nfl++) {
+            //     for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {
+            //         document.write(nfl +  " ")
+            //     }
+            //     document.write("<br>");
+            // }
+            // document.write("<br><br>");
+
+            // for (let nfl = 5; nfl >= 1; nfl--) {
+            //     for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {
+            //         document.write(nfl2 +  " ");
+            //     }
+            //     document.write("<br>");
+            // }
+            // document.write("<br><br>");
+
+            // for (let nfl = 5; nfl >= 1; nfl--) {
+            //     for (let nfl2 = 1; nfl2 <= nfl; nfl2++) {
+            //         document.write(nfl +  " ");
+            //     }
+            //     document.write("<br>");
+            // }
+            // document.write("<br><br>");
+
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array</div>
+        <pre>
+        let array_Ex = ["html","css","js","paythn","php","database","jquery"];
+
+        // --- Array Example 01 ---
+        for (let aexp = 0; aexp < array_Ex.length; aexp++) {
+            document.write(array_Ex[aexp] + " ");
+        }
+
+        // --- Array Example 02 ---
+        let array_Ex2 = [01,02,03,04,05,06,07,08,09];
+        let array_Ex2_sum = 0;
+        document.write("br");
+        for (let aexp2 = 0; aexp2 < array_Ex2.length; aexp2++) {
+            document.write(array_Ex2[aexp2] + " ");
+            array_Ex2_sum = array_Ex2_sum + array_Ex2[aexp2];
+        }
+        document.write("br Total Number " + array_Ex2_sum);
+        </pre>
+        <script>
+        // let array_Ex = ["html","css","js","paythn","php","database","jquery"];
+
+        // // --- Array Example 01 ---
+        // for (let aexp = 0; aexp < array_Ex.length; aexp++) {
+        //     document.write(array_Ex[aexp] + " ");
+        // }
+
+        // // --- Array Example 02 ---
+        // let array_Ex2 = [01,02,03,04,05,06,07,08,09];
+        // let array_Ex2_sum = 0;
+        // document.write("<br>");
+        // for (let aexp2 = 0; aexp2 < array_Ex2.length; aexp2++) {
+        //     document.write(array_Ex2[aexp2] + " ");
+        //     array_Ex2_sum = array_Ex2_sum + array_Ex2[aexp2];
+        // }
+        // document.write("<br> Total Number " + array_Ex2_sum);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Create Array</div>
+            
+        <pre>
+        let array_new_create_1 = new Array();
+        let array_new_create_2 = new Array(3);
+
+        document.write(array_new_create_1 + "br" + array_new_create_2 + "br");
+
+        // --- Array New Create Method 01 ---
+        array_new_create_1[0] = "On";
+        array_new_create_1[1] = "Off";
+        array_new_create_1[2] = "Gone";
+        array_new_create_1[3] = "unover";
+        array_new_create_1[4] = "Over";
+
+        let anc_one = array_new_create_1
+        for (let anc1 = 0; anc1 < anc_one.length; anc1++) {
+            document.write(array_new_create_1[anc1] + " "); 
+        }
+
+        // --- Array New Create Method 02 ---
+        for (let anc2_promte = 0; anc2_promte < array_new_create_2.length; anc2_promte++) {
+            array_new_create_2[anc2_promte] = prompt("Enter any Name");
+        }
+
+        for (let anc2 = 0; anc2 < array_new_create_2.length; anc2++) {
+            document.write(array_new_create_2[anc2] + " ");
+        }
+        </pre>
+        <script>
+        // let array_new_create_1 = new Array();
+        // let array_new_create_2 = new Array(3);
+
+        // // document.write(array_new_create_1 + "<br>" + array_new_create_2 + "<br>");
+
+        // // --- Array New Create Method 01 ---
+        // array_new_create_1[0] = "On";
+        // array_new_create_1[1] = "Off";
+        // array_new_create_1[2] = "Gone";
+        // array_new_create_1[3] = "unover";
+        // array_new_create_1[4] = "Over";
+
+        // let anc_one = array_new_create_1
+        // for (let anc1 = 0; anc1 < anc_one.length; anc1++) {
+        //     document.write(array_new_create_1[anc1] + " "); 
+        // }
+
+        // // --- Array New Create Method 02 ---
+        // for (let anc2_promte = 0; anc2_promte < array_new_create_2.length; anc2_promte++) {
+        //     array_new_create_2[anc2_promte] = prompt("Enter any Name");
+        // }
+
+        // for (let anc2 = 0; anc2 < array_new_create_2.length; anc2++) {
+        //     document.write(array_new_create_2[anc2] + " ");
+        // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Multidimensional</div>
+        <pre>
+        // --- Array Multidimensional Method ---
+        let array_multi = [
+            ["Parmar","Bhavanisinh","08"],
+            ["Jadav","Yujrajsinh","02"],
+            ["Dodiya","Rahulsinh","11"],
+            ["Mori","Hitendrasinh","27"],
+            ["Borana","Vishavrajsinh","06"],
+        ];
+
+        document.write("table border='1px' width ='100%'");
+        for (let am_list = 0; am_list < array_multi.length; am_list++) {
+            document.write("tr");
+            for (let am_list_inner = 0; am_list_inner < array_multi[am_list].length; am_list_inner++) {
+            document.write("td" + array_multi[am_list][am_list_inner] + "/td");
+        }
+            document.write("/tr");
+        }
+        document.write("/table");
+        </pre>
+        <script>
+        // // --- Array Multidimensional Method ---
+        // let array_multi = [
+        //     ["Parmar","Bhavanisinh","08"],
+        //     ["Jadav","Yujrajsinh","02"],
+        //     ["Dodiya","Rahulsinh","11"],
+        //     ["Mori","Hitendrasinh","27"],
+        //     ["Borana","Vishavrajsinh","06"],
+        // ];
+
+        // document.write("<table border='1px' width ='100%>'");
+        // for (let am_list = 0; am_list < array_multi.length; am_list++) {
+        //     document.write("<tr>");
+        //     for (let am_list_inner = 0; am_list_inner < array_multi[am_list].length; am_list_inner++) {
+        //     document.write("<td>" + array_multi[am_list][am_list_inner] + "</td>");
+        // }
+        //     document.write("</tr>");
+        // }
+        // document.write("</table>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array Delete, Modify, Sort & Reverse</div>
+        <pre>
+        let array_some_method = ["html","css","js","bootstrep","jquery"];
+
+        // --- Array Delete Method ---
+        delete array_some_method[3];
+        document.write(array_some_method + "br");
+
+        // --- Array Modify Method ---
+        array_some_method[2] = "xammp";
+        array_some_method[3] = "php";
+        array_some_method[4] = "paythan";
+        document.write(array_some_method + "br");
+
+        // --- Array Sort Method ---
+        array_some_method.sort();
+        document.write(array_some_method + "br");
+
+        // --- Array Reverse Method ---
+        array_some_method.reverse();
+        document.write(array_some_method + "br");
+        </pre>  
+        <script>
+        // let array_some_method = ["html","css","js","bootstrep","jquery"];
+
+        // // --- Array Delete Method ---
+        // delete array_some_method[3];
+        // document.write(array_some_method + "<br>");
+
+        // // --- Array Modify Method ---
+        // array_some_method[2] = "xammp";
+        // array_some_method[3] = "php";
+        // array_some_method[4] = "paythan";
+        // document.write(array_some_method + "<br>");
+
+        // // --- Array Sort Method ---
+        // array_some_method.sort();
+        // document.write(array_some_method + "<br>");
+
+        // // --- Array Reverse Method ---
+        // array_some_method.reverse();
+        // document.write(array_some_method + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array pop, push, shift & unshift</div>
+        <pre>
+        let array_some_method = ["html","css","js","bootstrep","jquery"];
+        
+        // --- Array Pop Method ---
+        array_some_method.pop();
+        document.write(array_some_method + "br");
+
+        // --- Array Push Method ---
+        array_some_method.push("css");
+        document.write(array_some_method + "br");
+
+        // --- Array Shift Method ---
+        array_some_method.shift();
+        document.write(array_some_method + "br");
+
+        // --- Array Unshift Method ---
+        array_some_method.unshift("css");
+        document.write(array_some_method + "br");
+        </pre>  
+        <script>
+            // let array_some_method = ["html","css","js","bootstrep","jquery"];
+
+            // // --- Array Pop Method ---
+            // array_some_method.pop();
+            // document.write(array_some_method + "<br>");
+
+            // // --- Array Push Method ---
+            // array_some_method.push("css");
+            // document.write(array_some_method + "<br>");
+
+            // // --- Array Shift Method ---
+            // array_some_method.shift();
+            // document.write(array_some_method + "<br>");
+
+            // // --- Array Unshift Method ---
+            // array_some_method.unshift("css");
+            // document.write(array_some_method + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array Concat & join</div>
+        <pre>
+        let array_cj_1 = ["bhavanisinh","08-01-1997","Monday","Male"];
+        let array_cj_2 = ["Kardiya Rajput","Cricket"];
+
+        // --- Array Concat Method ---
+        array_cj_2 = array_cj_1.concat("Kardiya Rajput","Cricket");
+        document.write(array_cj_2);
+
+        array_cj_2 = array_cj_1.concat(array_cj_2);
+        document.write(array_cj_2);
+
+        array_c = array_cj_1.concat(array_cj_2);
+        document.write(array_cj_2);
+
+        // --- Array Join Method ---
+        array_j = array_cj_1.join(" : ");
+        document.write(array_j);
+        </pre>
+        <script>
+            // let array_cj_1 = ["bhavanisinh","08-01-1997","Monday","Male"];
+            // let array_cj_2 = ["Kardiya Rajput","Cricket"];
+
+            // // --- Array Concat Method ---
+            // array_cj_2 = array_cj_1.concat("Kardiya Rajput","Cricket");
+            // document.write(array_cj_2);
+
+            // array_cj_2 = array_cj_1.concat(array_cj_2);
+            // document.write(array_cj_2);
+
+            // array_c = array_cj_1.concat(array_cj_2);
+            // document.write(array_cj_2);
+
+            // // --- Array Join Method ---
+            // array_j = array_cj_1.join(" : ");
+            // document.write(array_j);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array Slice & Splice</div>
+        <pre>
+            // --- Array slice Method ---
+            var slice_array = ["Parmar","Dodiya","Jadav","Mori","Borana"];
+            document.write(slice_array + "br");
+
+            var slice_Ex = slice_array.slice(3,5);
+            document.write(slice_Ex + "br");
+
+            // --- Array splice Method ---
+            var splice_array = ["Parmar","Dodiya","Jadav"];
+            document.write(splice_array + "br");
+
+            splice_array.splice(1,0,"Mori","Borana");
+            document.write(splice_array + "br");
+
+            splice_array.splice(1,2);
+            document.write(splice_array + "br");
+        </pre>
+        <script>
+            // // --- Array slice Method ---
+            // var slice_array = ["Parmar","Dodiya","Jadav","Mori","Borana"];
+            // document.write(slice_array + "<br><br>");
+
+            // var slice_Ex = slice_array.slice(3,5);
+            // document.write(slice_Ex + "<br><br>");
+
+            // // --- Array splice Method ---
+            // var splice_array = ["Parmar","Dodiya","Jadav"];
+            // document.write(splice_array + "<br><br>");
+
+            // splice_array.splice(1,0,"Mori","Borana");
+            // document.write(splice_array + "<br><br>");
+
+            // splice_array.splice(1,2);
+            // document.write(splice_array + "<br><br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array (isArray)</div>
+        <pre>
+        let isArray_a = ["Parmar","Dodiya","Jadav","Parmar"];
+        let isArray_b = "Parmar";
+        let isArray_c = 08;
+        let isArray_d = true;
+
+        let check = isArray_a;
+
+        // --- Array (isArray) Method ---
+        if (Array.isArray(check)) {
+            alert("This Is an Array " + (typeof check))
+        } else {
+            alert("This Is not an Array " + "Is a "+ (typeof check))
+        };
+        </pre>
+        <script>
+        // let isArray_a = ["Parmar","Dodiya","Jadav","Parmar"];
+        // let isArray_b = "Parmar";
+        // let isArray_c = 08;
+        // let isArray_d = true;
+
+        // let check = isArray_c;
+
+        // // --- Array (isArray) Method ---
+        // if (Array.isArray(check)) {
+        //     alert("This Is an Array " + (typeof check))
+        // } else {
+        //     alert("This Is not an Array " + "Is a "+ (typeof check))
+        // };
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array includes, indexOf & lastIndexOf Method</div>
+        <pre>
+        let array_iil = ["Parmar","Dodiya","Jadav","Parmar","Jadav","Dodiya","Parmar"];
+
+        let iil = array_iil;
+
+        // --- Array includes Method ---
+        iil = array_iil.includes("Parmar");
+        document.write(iil + " ");
+
+        // --- Array lastIndexOf Method ---
+        iil = array_iil.indexOf("Parmar",1);
+        document.write(iil + " ");
+
+        // --- Array lastIndexOf Method ---
+        iil = array_iil.lastIndexOf("Parmar",4);
+        document.write(iil + " ");
+        </pre>
+        <script>
+        // let array_iil = ["Parmar","Dodiya","Jadav","Parmar","Jadav","Dodiya","Parmar"];
+
+        // let iil = array_iil;
+
+        // // --- Array includes Method ---
+        // iil = array_iil.includes("Parmar");
+        // document.write(iil + " ");
+
+        // // --- Array lastIndexOf Method ---
+        // iil = array_iil.indexOf("Parmar",1);
+        // document.write(iil + " ");
+
+        // // --- Array lastIndexOf Method ---
+        // iil = array_iil.lastIndexOf("Parmar",4);
+        // document.write(iil + " ");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array some & every Method</div>
+        <pre>
+        let array_SE = ["10","15","10","20","18","08"];
+        document.write(array_SE + "br");
+    
+        // --- Array Some Method ---
+        let array_some_check = array_SE.some(asc);
+        function asc(asc_s) {
+            return asc_s >= 18;
+        }
+        document.write(array_some_check + "br");
+    
+        // --- Array Every Method ---
+        let array_every_check = array_SE.every(aec);
+        function aec(aec_e) {
+            return aec_e >= 18;
+        }
+        document.write(array_every_check + "br");
+        </pre>
+        <script>
+        // let array_SE = ["10","15","10","20","18","08"];
+        // document.write(array_SE + "<br>");
+
+        // // --- Array Some Method ---
+        // let array_some_check = array_SE.some(asc);
+        // function asc(asc_s) {
+        //     return asc_s >= 18;
+        // }
+        // document.write(array_some_check + "<br>");
+
+        // // --- Array Every Method ---
+        // let array_every_check = array_SE.every(aec);
+        // function aec(aec_e) {
+        //     return aec_e >= 18;
+        // }
+        // document.write(array_every_check + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array find & findIndex Method</div>
+        <pre>
+        let array_FFX = ["10","15","10","20","18","08"];
+        document.write(array_FFX + "br");
+
+        // --- Array find Method ---
+        let array_find_check = array_FFX.find(afc);
+        function afc(afc_f) {
+            return afc_f >= 18;
+        }
+        document.write(array_find_check + "br");
+
+        // --- Array findIndex Method ---
+        let array_findIndex_check = array_FFX.findIndex(afxc);
+        function afxc(afxc_fx) {
+             return afxc_fx >= 18;
+        }
+        document.write(array_findIndex_check + "br");
+        </pre>
+        <script>
+        // let array_FFX = ["10","15","10","20","18","08"];
+        // document.write(array_FFX + "<br>");
+
+        // // --- Array find Method ---
+        // let array_find_check = array_FFX.find(afc);
+        // function afc(afc_f) {
+        //     return afc_f >= 18;
+        // }
+        // document.write(array_find_check + "<br>");
+
+        // // --- Array findIndex Method ---
+        // let array_findIndex_check = array_FFX.findIndex(afxc);
+        // function afxc(afxc_fx) {
+        //     return afxc_fx >= 18;
+        // }
+        // document.write(array_findIndex_check + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array Filter Method</div>
+        <pre>
+        let array_filter = ["10","15","10","20","18","08"];
+        document.write(array_filter + "br");
+            
+        // --- Array Filter Method ---
+        let array_filter_check = array_filter.filter(afic);
+        function afic(afic_fi) {
+            return afic_fi >= 18;
+        }
+        document.write(array_filter_check + "br");
+        </pre>
+        <script>
+        // let array_filter = ["10","15","10","20","18","08"];
+        // document.write(array_filter + "<br>");
+            
+        // // --- Array Filter Method ---
+        // let array_filter_check = array_filter.filter(afic);
+        // function afic(afic_fi) {
+        //     return afic_fi >= 18;
+        // }
+        // document.write(array_filter_check + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array toString, valueOf & fill Method</div>
+        <pre>
+        let array_tvf = ["18","18"];
+
+        let array_t = array_tvf.toString();
+        document.write(array_t+ " " + (typeof array_t) + "br");
+
+        let array_v = array_tvf.valueOf();
+        document.write(array_v+ " " + (typeof array_v) + "br");
+
+        let array_f = array_tvf.fill("age");
+        document.write(array_f+ " " + (typeof array_f) + "br");
+        </pre>
+        <script>
+        // let array_tvf = ["18","18"];
+
+        // let array_t = array_tvf.toString();
+        // document.write(array_t+ " " + (typeof array_t) + "<br>");
+
+        // let array_v = array_tvf.valueOf();
+        // document.write(array_v+ " " + (typeof array_v) + "<br>");
+
+        // let array_f = array_tvf.fill("age");
+        // document.write(array_f+ " " + (typeof array_f) + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array forEach loop Method</div>
+        <pre>
+        let array_fe_ex = ["Parmar","Dodiya","Jadav"];
+
+        array_fe_ex.forEach(function (value, indexa) {
+            document.write(indexa + " : " + value + "br" )
+        });
+
+        array_fe_ex.forEach(loop);
+        function loop(value, indexa) {
+            document.write(indexa + " : " + value + "br" )
+        }
+        </pre>   
+        <script>
+        // let array_fe_ex = ["Parmar","Dodiya","Jadav"];
+
+        // array_fe_ex.forEach(function (value, indexa) {
+        //     document.write(indexa + " : " + value + "<br>" )
+        // });
+
+        // array_fe_ex.forEach(loop);
+        // function loop(value, indexa) {
+        //     document.write(indexa + " : " + value + "<br>" )
+        // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Object Method</div>
+        <pre>
+        let my_object = {
+            fn : "bhavanisinh",
+            ln : "parmar",
+            age : "26",
+            bod : "08-01-1997",
+            inner_array : ["time","pass","movie"],
+            inner_object : {
+                city : "time",
+                country : "vkjfnv",
+            },
+            fullname : function(){
+                return this.fn + " " + this.ln;
+            }
+        }
+
+        console.log(my_object,  my_object.inner_object);
+        document.write(my_object.fullname());
+        document.write(my_object.inner_object.city);
+        </pre>
+        <script>
+        // let my_object = {
+        //     fn : "bhavanisinh",
+        //     ln : "parmar",
+        //     age : "26",
+        //     bod : "08-01-1997",
+        //     inner_array : ["time","pass","movie"],
+        //     inner_object : {
+        //         city : "time",
+        //         country : "vkjfnv",
+        //     },
+        //     fullname : function(){
+        //         return this.fn + " " + this.ln;
+        //     }
+        // }
+
+        // console.log(my_object,  my_object.inner_object);
+        // document.write(my_object.fullname());
+        // document.write(my_object.inner_object.city);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Creat New Object Method</div>
+        <pre>
+        let creat_object = new Object;
+        creat_object.fn = "Bhavanisinh";
+        creat_object.ln = "Parmar";
+        creat_object.innerobject = {
+            city : "time",
+            country : "vkjfnv",
+        };
+        creat_object.innerarray = ["time","pass","movie"],
+        creat_object.fullname = function(){
+            return this.fn + " " + ln;
+        };
+
+        console.log(creat_object);
+        </pre>
+        <script>
+        // let creat_object = new Object;
+        // creat_object.fn = "Bhavanisinh";
+        // creat_object.ln = "Parmar";
+        // creat_object.innerobject = {
+        //     city : "time",
+        //     country : "vkjfnv",
+        // };
+        // creat_object.innerarray = ["time","pass","movie"],
+        // creat_object.fullname = function(){
+        //     return this.fn + " " + ln;
+        // };
+
+        // console.log(creat_object);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Array Of Object</div>
+        <pre>
+        let aoo = [
+            {name : "Bhavanisinh", age : 25},
+            {name : "Rahulsinh", age : 31},
+            {name : "Hitemdrsinh", age : 20},
+        ];
+
+        for (let faoo = 0; faoo < aoo.length; faoo++) {
+            document.write(aoo[faoo].name + " " + aoo[faoo].age + "br");
+        }
+        </pre>
+        <script>
+            // let aoo = [
+            //     {name : "Bhavanisinh", age : 25},
+            //     {name : "Rahulsinh", age : 31},
+            //     {name : "Hitemdrsinh", age : 20},
+            // ];
+
+            // for (let faoo = 0; faoo < aoo.length; faoo++) {
+            //     document.write(aoo[faoo].name + " " + aoo[faoo].age + "<br>");
+            // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Const Variable with Array & Object</div>
+        <pre>
+        const cao = [
+            {name : "Bhavanisinh", age : 25},
+            {name : "Rahulsinh", age : 31},
+            {name : "Hitemdrsinh", age : 20},
+        ];
+
+        cao[0].name = "indrajitsinh";
+        for (let fcao = 0; fcao < cao.length; fcao++) {
+            document.write(cao[fcao].name + " " + cao[fcao].age + "br");
+        }
+        </pre>
+        <script>
+        // const cao = [
+        //     {name : "Bhavanisinh", age : 25},
+        //     {name : "Rahulsinh", age : 31},
+        //     {name : "Hitemdrsinh", age : 20},
+        // ];
+
+        // cao[0].name = "indrajitsinh";
+        // cao[0].age = 27;
+
+        // for (let fcao = 0; fcao < cao.length; fcao++) {
+        //     document.write(cao[fcao].name + " " + cao[fcao].age + "<br>");
+        // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">For in loop</div>
+        <pre>
+        const f_i_l = {
+            name : "Bhavanisinh", 
+            age : 25,
+            bod : "08/01/1997",
+        };
+
+        for (const key in f_i_l) {
+            document.write(key + " = " + f_i_l[key] + "br");
+        }
+        </pre>
+        <script>
+        // const f_i_l = {
+        //     name : "Bhavanisinh", 
+        //     age : 25,
+        //     bod : "08/01/1997",
+        // };
+
+        // for (const key in f_i_l) {
+        //     document.write(key + " = " + f_i_l[key] + "<br>");
+        // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Map Method</div>
+        <pre>
+        // --- Map Method Example 01 --- 
+        let array_map = [11,12,13,14,15,16,17,18,19,20];
+
+        let map_num = array_map.map(mn);
+        function mn(mnx) {
+            return mnx * 10;
+        }
+        document.write(map_num);
+
+        // --- Map Method Example 02 --- 
+        let array_map2 = [
+            {fn: "Html", ln: "Js" },
+            {fn: "Bhavanisinh", ln: "Parmar" },
+            {fn: "Jayraj", ln: "Mori" },
+            {fn: "Time", ln: "Pass" },
+        ];
+
+        let map2_data = array_map2.map(md2);
+        function md2(md2_inner) {
+            return "br" + md2_inner.fn + " " + md2_inner.ln;
+        }
+        document.write(map2_data);
+        </pre>
+        <script>
+        // // --- Map Method Example 01 --- 
+        // let array_map = [11,12,13,14,15,16,17,18,19,20];
+
+        // let map_num = array_map.map(mn);
+        // function mn(mnx) {
+        //     return mnx * 10;
+        // }
+        // document.write(map_num);
+
+        // // --- Map Method Example 02 --- 
+        // let array_map2 = [
+        //     {fn: "Html", ln: "Js" },
+        //     {fn: "Bhavanisinh", ln: "Parmar" },
+        //     {fn: "Jayraj", ln: "Mori" },
+        //     {fn: "Time", ln: "Pass" },
+        // ];
+
+        // let map2_data = array_map2.map(md2);
+        // function md2(md2_inner) {
+        //     return "<br>" + md2_inner.fn + " " + md2_inner.ln;
+        // }
+        // document.write(map2_data);
+        </script>
+    </div>
+</section>
+
+
+<section>
+    <div>
+        <div class="haeding">String Methods</div>
+        <pre>
+        let string_method = "Javascript is best is langveage";
+        let string_method2 = "   Javascript is best is langveage   ";
+    
+        // --- String Length Method ---
+        document.write(string_method.length + "br");
+
+        // --- String toLowerCase Method ---
+        document.write(string_method.toLowerCase() + "br");
+
+        // --- String toUpperCase Method ---
+        document.write(string_method.toUpperCase() + "br");
+
+        // --- String includes Method ---
+        document.write(string_method.includes("is b") + "br");
+
+        // --- String startsWith Method ---
+        document.write(string_method.startsWith("java") + "br");
+
+        // --- String endsWith Method ---
+        document.write(string_method.endsWith("veage") + "br");
+
+        // --- String search Method ---
+        document.write(string_method.search("is") + "br");
+
+        // --- String match Method ---
+        document.write(string_method.match(/is/g) + "br");
+
+        // --- String indexOf Method ---
+        document.write(string_method.indexOf("is") + "br");
+
+        // --- String lastIndexOf Method ---
+        document.write(string_method.lastIndexOf("is") + "br");
+
+        // --- String replace Method ---
+        document.write(string_method.replace("langveage", "language") + "br");
+        document.write(string_method.replace("is", "are") + "br");
+        document.write(string_method.replace(/is/g, "are") + "br");
+
+        // --- String trim Method ---
+        alert(string_method2 + "trim Without");
+        alert(string_method2.trim() + " trim With");
+        </pre>
+        <script>
+        // let string_method = "Javascript is best is langveage";
+        // let string_method2 = "   Javascript is best is langveage   ";
+    
+        // // --- String Length Method ---
+        // document.write(string_method.length + "<br>");
+
+        // // --- String toLowerCase Method ---
+        // document.write(string_method.toLowerCase() + "<br>");
+
+        // // --- String toUpperCase Method ---
+        // document.write(string_method.toUpperCase() + "<br>");
+
+        // // --- String includes Method ---
+        // document.write(string_method.includes("is b") + "<br>");
+
+        // // --- String startsWith Method ---
+        // document.write(string_method.startsWith("java") + "<br>");
+
+        // // --- String endsWith Method ---
+        // document.write(string_method.endsWith("veage") + "<br>");
+
+        // // --- String search Method ---
+        // document.write(string_method.search("is") + "<br>");
+
+        // // --- String match Method ---
+        // document.write(string_method.match(/is/g) + "<br>");
+
+        // // --- String indexOf Method ---
+        // document.write(string_method.indexOf("is") + "<br>");
+
+        // // --- String lastIndexOf Method ---
+        // document.write(string_method.lastIndexOf("is") + "<br>");
+
+        // // --- String replace Method ---
+        // document.write(string_method.replace("langveage", "language") + "<br>");
+        // document.write(string_method.replace("is", "are") + "<br>");
+        // document.write(string_method.replace(/is/g, "are") + "<br>");
+
+        // // --- String trim Method ---
+        // alert(string_method2 + "trim Without");
+        // alert(string_method2.trim() + " trim With");
+
+        </script>
+    </div>
+</section>
+
+
+<section>
+    <div>
+        <div class="haeding">String Methods</div>
+        <pre>
+        let string_method = "Javascript is best is language";
+        let string_method2 = "PHP is best is langveage";
+        let string_method3 = 08;
+    
+        // --- String charAt Method ---
+        document.write(string_method.charAt(11) + "br");
+    
+        // --- String charCodeAt Method ---
+        document.write(string_method.charCodeAt(0) + "br");
+        
+        // --- String fromCharCode Method ---
+        document.write(String.fromCharCode(65) + "br");
+
+        // --- String concat Method ---
+        document.write(string_method.concat(string_method2) + "br");
+
+        // --- String concat Method ---
+        document.write(string_method.concat(string_method2) + "br");
+
+        // --- String split Method ---
+        document.write(string_method.split(" ") + "br");
+        document.write(string_method.split("is") + "br");
+
+        // --- String repeat Method ---
+        document.write(string_method.repeat(2) + "br");
+
+        // --- String slice Method ---
+        document.write(string_method.slice(10) + "br");
+        document.write(string_method.slice(10,13) + "br");
+        document.write(string_method.slice(-5) + "br");
+
+        // --- String substr Method ---
+        document.write(string_method.substr(10) + "br");
+        document.write(string_method.substr(10,20) + "br");
+
+        // --- String substring Method ---
+        document.write(string_method.substring(10,15) + "br");
+
+        // --- String toString Method ---
+        document.write(string_method3.toString() + 20 + "br");
+
+        // --- String valueOf Method ---
+        document.write(string_method2.valueOf() + "br");
+        </pre>
+        <script>
+        // let string_method = "Javascript is best is language";
+        // let string_method2 = "PHP is best is langveage";
+        // let string_method3 = 08;
+    
+        // // --- String charAt Method ---
+        // document.write(string_method.charAt(11) + "<br>");
+    
+        // // --- String charCodeAt Method ---
+        // document.write(string_method.charCodeAt(0) + "<br>");
+        
+        // // --- String fromCharCode Method ---
+        // document.write(String.fromCharCode(65) + "<br>");
+
+        // // --- String concat Method ---
+        // document.write(string_method.concat(string_method2) + "<br>");
+
+        // // --- String split Method ---
+        // document.write(string_method.split(" ") + "<br>");
+        // document.write(string_method.split("is") + "<br>");
+
+        // // --- String repeat Method ---
+        // document.write(string_method.repeat(2) + "<br>");
+
+        // // --- String slice Method ---
+        // document.write(string_method.slice(10) + "<br>");
+        // document.write(string_method.slice(10,12) + "<br>");
+        // document.write(string_method.slice(-5) + "<br>");
+
+        // // --- String substr Method ---
+        // document.write(string_method.substr(10) + "<br>");
+        // document.write(string_method.substr(8,8) + "<br>");
+
+        // // --- String substring Method ---
+        // document.write(string_method.substring(2,8) + "<br>");
+
+        // // --- String toString Method ---
+        // document.write(string_method3.toString() + 20 + "<br>");
+
+        // // --- String valueOf Method ---
+        // document.write(string_method2.valueOf() + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Number Methods</div>
+        <pre>
+        let thisisnumber = 100.4685;
+        let check;
+
+        Number() Method
+        check = Number(thisisnumber);
+        
+        parseInt() Method
+        check = parseInt(thisisnumber);
+        
+        parseFloat() Method
+        check = parseFloat(thisisnumber);
+
+        isFinite() Method
+        check = Number.isFinite(thisisnumber);
+
+        isFinite() Method
+        check = Number.isInteger(thisisnumber);
+
+        toFixed() Method
+        check = thisisnumber.toFixed();
+
+        toPrecision Method
+        check = thisisnumber.toPrecision(3);
+        
+        document.write((check) + " " + typeof check);
+        </pre>
+        <script>
+        // let thisisnumber = 100.4685;
+        // let check;
+
+        // Number() Method
+        // check = Number(thisisnumber);
+        
+        // parseInt() Method
+        // check = parseInt(thisisnumber);
+        
+        // parseFloat() Method
+        // check = parseFloat(thisisnumber);
+
+        // isFinite() Method
+        // check = Number.isFinite(thisisnumber);
+
+        // isFinite() Method
+        // check = Number.isInteger(thisisnumber);
+
+        // toFixed() Method
+        // check = thisisnumber.toFixed();
+
+        // toPrecision Method
+        // check = thisisnumber.toPrecision(3);
+        
+        // document.write((check) + " " + typeof check);
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Math Methods</div>
+        <pre>
+        // ceil() method
+        let mceil = Math.ceil(-2.59);
+        document.write(mceil + "br");
+
+        // floor() method
+        let mfloor = Math.floor(3.2);
+        document.write(mfloor + "br");
+
+        // round() method
+            let mround = Math.round(2.55);
+        document.write(mround + "br");
+
+        // trunc() method
+        let mtrunc = Math.trunc(22.1);
+        document.write(mtrunc + "br");
+
+        // trunc() method
+        let mmax = Math.max(08,01,1997);
+        document.write(mmax + "br");
+
+        // min() method
+        let mmin = Math.min(08,01,1997);
+        document.write(mmin + "br");
+
+        // sqrt() method
+        let msqrt = Math.sqrt(81);
+        document.write(msqrt + "br");
+
+        // cbrt() method
+        let mcbrt = Math.cbrt(125);
+        document.write(mcbrt + "br");
+
+        // pow() method
+        let mpow = Math.pow(5,5);
+        document.write(mpow + "br");
+
+        // random() method
+        let mrandom = Math.floor(Math.random() * 100 + 1);
+        document.write(mrandom + "br");
+
+        // abs() method
+        let mabs = Math.abs();
+        document.write(mabs + "br");
+
+        // pi method
+        let mpi = Math.PI;
+        document.write(mpi + "br");
+        </pre>
+        <script>
+        // // ceil() method
+        // let mceil = Math.ceil(-2.59);
+        // document.write(mceil + "<br>");
+
+        // // floor() method
+        // let mfloor = Math.floor(3.2);
+        // document.write(mfloor + "<br>");
+
+        // // round() method
+        //  let mround = Math.round(2.55);
+        // document.write(mround + "<br>");
+
+        // // trunc() method
+        // let mtrunc = Math.trunc(22.1);
+        // document.write(mtrunc + "<br>");
+
+        // // trunc() method
+        // let mmax = Math.max(08,01,1997);
+        // document.write(mmax + "<br>");
+
+        // // min() method
+        // let mmin = Math.min(08,01,1997);
+        // document.write(mmin + "<br>");
+
+        // // sqrt() method
+        // let msqrt = Math.sqrt(81);
+        // document.write(msqrt + "<br>");
+
+        // // cbrt() method
+        // let mcbrt = Math.cbrt(125);
+        // document.write(mcbrt + "<br>");
+
+        // // pow() method
+        // let mpow = Math.pow(5,5);
+        // document.write(mpow + "<br>");
+
+        // // random() method
+        // let mrandom = Math.floor(Math.random() * 100 + 1);
+        // document.write(mrandom + "<br>");
+
+        // // abs() method
+        // let mabs = Math.abs();
+        // document.write(mabs + "<br>");
+
+        // // pi method
+        // let mpi = Math.PI;
+        // document.write(mpi + "<br>");
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Get Date & TIme Methods</div>
+        <pre>
+        var now = new Date("January 8 1997");
+        var checktoday = now.getDay();
+        document.write(now + "br");
+        document.write(now.toDateString()+ "br");
+        document.write(now.getDate()+ "br");
+        document.write(now.getMonth()+ "br");
+        document.write(now.getFullYear()+ "br");
+        document.write(now.getDay()+ "br");
+        document.write(now.getHours()+ "br");
+        document.write(now.getMinutes()+ "br");
+        document.write(now.getSeconds()+ "br");
+        document.write(now.getMilliseconds()+ "br");
+
+        if(checktoday == 0){
+            alert("to Day Is sun");
+        } else if (checktoday == 1) {
+            alert("to Day Is monday");
+        } else if(checktoday == 2){
+            alert("to Day Is thuday");
+        } else if(checktoday == 3){
+            alert("to Day Is w");
+        } else if(checktoday == 4){
+            alert("to Day Is thar");
+        } else if(checktoday == 5){
+            alert("to Day Is fre");
+        } else if(checktoday == 6){
+            alert("to Day Is srtdy");
+        }
+        </pre>
+        <script>
+        // var now = new Date("January 8 1997");
+        // var checktoday = now.getDay();
+        // document.write(now + "<br>");
+        // document.write(now.toDateString()+ "<br>");
+        // document.write(now.getDate()+ "<br>");
+        // document.write(now.getMonth()+ "<br>");
+        // document.write(now.getFullYear()+ "<br>");
+        // document.write(now.getDay()+ "<br>");
+        // document.write(now.getHours()+ "<br>");
+        // document.write(now.getMinutes()+ "<br>");
+        // document.write(now.getSeconds()+ "<br>");
+        // document.write(now.getMilliseconds()+ "<br>");
+        // if(checktoday == 0){
+        //     alert("to Day Is sun");
+        // } else if (checktoday == 1) {
+        //     alert("to Day Is monday");
+        // } else if(checktoday == 2){
+        //     alert("to Day Is thuday");
+        // } else if(checktoday == 3){
+        //     alert("to Day Is w");
+        // } else if(checktoday == 4){
+        //     alert("to Day Is thar");
+        // } else if(checktoday == 5){
+        //     alert("to Day Is fre");
+        // } else if(checktoday == 6){
+        //     alert("to Day Is srtdy");
+        // }
+        </script>
+    </div>
+</section>
+
+<section>
+    <div>
+        <div class="haeding">Set Date & Time Methods</div>
+        <pre>
+        let sdti = new Date();
+    
+        sdti.setDate(27);
+        document.write(sdti + "br");
+
+        sdti.setFullYear(2022);
+        document.write(sdti + "br");
+
+        sdti.setMonth(1);
+        document.write(sdti + "br");
+
+        sdti.setHours(15);
+        document.write(sdti + "br");
+
+        sdti.setMinutes(30);
+        document.write(sdti + "br");
+
+        sdti.setSeconds(45);
+        document.write(sdti + "br");
+        </pre>
+        <script>
+        // let sdti = new Date();
+        
+        // sdti.setDate(27);
+        // document.write(sdti + "<br>");
+
+        // sdti.setFullYear(2021);
+        // document.write(sdti + "<br>");
+
+        // sdti.setMonth(1);
+        // document.write(sdti + "<br>");
+
+        // sdti.setHours(15);
+        // document.write(sdti + "<br>");
+
+        // sdti.setMinutes(30);
+        // document.write(sdti + "<br>");
+
+        // sdti.setSeconds(45);
+        // document.write(sdti + "<br>");
+        </script>
+    </div>
+</section>
+
+</body>
+
+</html>

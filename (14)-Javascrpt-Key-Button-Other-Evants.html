@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site Title -->
+    <title>Javascrpt Key Button Other Evants</title>
+
+    <!-- Site Css Links -->
+    <style>
+        @font-face {
+            font-family: Quicksand;
+            src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+        }
+
+        *:not(.fa) {
+            font-family: Quicksand;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #fcfcfc;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 15px 10px 15px;
+            background: transparent;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            font-size: 24px;
+            background: #212668;
+        }
+
+        button:hover {
+            background: #212668;
+            color: white;
+        }
+
+        button:active {
+            background: #216823;
+            color: white;
+        }
+
+        input{
+            width: 232px;
+            margin-bottom: 20px;
+            border: 1px solid lightgray;
+            height: 40px;
+            border-radius: 5px;
+            padding: 0 5px;
+            font-weight: 600;
+            color: black;
+            font-size: 18px;
+        }
+
+        .squary-box{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #212668;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <input type="text" id="input-text">
+    <button id="target-btn">Click Function Btn</button>
+
+    <div class="squary-box"></div>
+
+    <script>
+        // let target = document.getElementById("target-btn");
+        // let target2 = document.getElementById("input-text");
+        
+        // Ctrl Key
+        // target.addEventListener("click", function(e){
+        //     let ctrl = e.ctrlKey;
+        //     console.log(ctrl);
+        //     if (ctrl) {
+        //         this.innerHTML = "You have pressed ctrl key"
+        //     } else {
+        //         this.innerHTML = "You have not presse ctrl key"
+        //     }
+        // })
+        
+        // Shift Key
+        // target.addEventListener("click", function(e){
+        //     let shift = e.shiftKey;
+        //     console.log(shift);
+        //     if (shift) {
+        //         this.innerHTML = "You have pressed shift key"
+        //     } else {
+        //         this.innerHTML = "You have not presse shift key"
+        //     }
+        // })
+        
+        // Alt Key
+        // target.addEventListener("click", function(e){
+        //     let alt = e.altKey;
+        //     console.log(alt);
+        //     if (alt) {
+        //         this.innerHTML = "You have pressed alt key"
+        //     } else {
+        //         this.innerHTML = "You have not presse alt key"
+        //     }
+        // })
+        
+        // Windo Key
+        // target.addEventListener("click", function(e){
+        //     let meta = e.metaKey;
+        //     console.log(meta);
+        //     if (meta) {
+        //         this.innerHTML = "You have pressed windo key"
+        //     } else {
+        //         this.innerHTML = "You have not presse windo key"
+        //     }
+        // })
+        
+
+        // Example 01
+        // target.addEventListener("click", function(e){
+        //     let Btn_Key
+        //     switch (true) {
+        //         case e.ctrlKey:
+        //             Btn_Key = "You have pressed "+ e.ctrlKey +" key";
+        //             break;
+        //         case e.shiftKey:
+        //             Btn_Key = "You have pressed "+ e.shiftKey +" key";
+        //             break;
+        //         case e.altKey:
+        //             Btn_Key = "You have pressed "+ e.altKey +" key";
+        //             break;
+        //         case e.metaKey:
+        //             Btn_Key = "You have pressed "+ e.metaKey +" key";
+        //             break;
+        //         default:
+        //             Btn_Key = "You have not pressed any key";
+        //             break;
+        //     }
+        //     target.innerHTML = Btn_Key;
+        // });
+        
+
+        // Example 02
+        // target2.addEventListener("keydown", function(e){
+        //     let Btn_Key
+        //     switch (true) {
+        //         case e.ctrlKey:
+        //             Btn_Key = "You have pressed ctrl key";
+        //             break;
+        //         case e.shiftKey:
+        //             Btn_Key = "You have pressed shift key";
+        //             break;
+        //         case e.altKey:
+        //             Btn_Key = "You have pressed alt key";
+        //             break;
+        //         case e.metaKey:
+        //             Btn_Key = "You have pressed meta key";
+        //             break;
+        //         default:
+        //             Btn_Key = "You have pressed other key";
+        //             break;
+        //     }
+        //     target.innerHTML = Btn_Key;
+        // });
+
+    </script>
+
+    <script>
+        // let target = document.getElementById("target-btn");
+
+        // target.addEventListener("mousedown", function(e){
+        //     let mouse_btn = "You have pressed" + e.button;
+        //     let bg_color;
+        //     switch (e.button) {
+        //         case 0:
+        //             this.innerHTML = "You have click mouse left btn";
+        //             bg_color = "green";
+        //             break;
+        //         case 1:
+        //             this.innerHTML = "You have click mouse center btn";
+        //             bg_color = "yellow";
+        //             break;
+        //         case 2:
+        //             this.innerHTML = "You have click mouse right btn";
+        //             bg_color = "red";
+        //             break;
+        //         default:
+        //             this.innerHTML = "You have not clickd mouse btn";
+        //             bg_color = "black";
+        //             break;
+        //     }
+        //     document.querySelector("body").style.backgroundColor = bg_color;
+        // });
+    </script>
+
+    <script>
+        //  let target = document.getElementById("target-btn");
+        //  let target2 = document.getElementById("input-text");
+        //  let target3 = document.querySelector("body");
+
+        // //  Example 1
+        //  target2.addEventListener("keydown", function(e){
+        //     let keyboard_key = "You have pressd "+ e.key +" key";
+        //     target.innerHTML = keyboard_key;
+        //  });
+
+        // //  Example 2
+        // let left = 0;
+        // let up = 0;
+        // target3.addEventListener("keydown", function(e){
+        //     switch (e.key) {
+        //         case "ArrowUp":
+        //             target.innerHTML =  "You have pressed "+ e.key + " key";
+        //             up = up - 10;
+        //             break;
+        //         case "ArrowDown":
+        //             target.innerHTML =  "You have pressed "+ e.key + " key"; 
+        //             up = up + 10;
+        //             break;
+        //         case "ArrowRight":
+        //             target.innerHTML =  "You have pressed "+ e.key + " key"; 
+        //             left = left + 10;
+        //             break;
+        //         case "ArrowLeft":
+        //             target.innerHTML =  "You have pressed "+ e.key + " key"; 
+        //             left = left - 10;
+        //             break;
+        //         default:
+        //             target.innerHTML =  "You have pressed "+ e.key + " key"; 
+        //             break;
+        //     }
+        //     document.getElementsByClassName("squary-box")[0].style.top = up + "px";
+        //     document.getElementsByClassName("squary-box")[0].style.left = left + "px";
+        // });
+    </script>
+
+    <script>
+        // let target = document.getElementById("target-btn");
+        // let target2 = document.getElementById("input-text"); 
+        
+        // target.addEventListener("copy", function(e){
+        //     let c_text = "You have copy text";
+        //     target2.value = c_text;
+        //     bg_color = "green";
+        //     document.querySelector("body").style.backgroundColor = bg_color;
+        // });
+        
+        // target2.addEventListener("paste", function(e){
+        //     let p_text = "You have paste text";
+        //     target.innerHTML = p_text;
+        //     bg_color = "yellow";
+        //     document.querySelector("body").style.backgroundColor = bg_color;
+        // });
+        
+        // target2.addEventListener("cut", function(e){
+        //     let cut_text = "You have cut text";
+        //     target.innerHTML = cut_text;
+        //     bg_color = "red";
+        //     document.querySelector("body").style.backgroundColor = bg_color;
+        // });
+    </script>
+
+    <script>
+        // let target = document.getElementById("target-btn");
+        // let target2 = document.getElementById("input-text");
+        // let target3 = document.getElementsByClassName("squary-box")[0];
+        // let target4 = document.querySelector("body");
+
+        // target.style.display = "none";
+        // target2.style.display = "none";
+        // target3.style.display = "none";
+
+        // window.addEventListener("online", function(){
+        //     target4.style.backgroundColor = "green";
+        // })
+        // window.addEventListener("offline", function(){
+        //     target4.style.backgroundColor = "red";
+        // })
+            
+        // if (navigator.onLine) {
+        //     console.log("You Are Online");
+        //     target4.style.backgroundColor = "green";
+        // } else {
+        //     console.log("You Are Offline");
+        //     target4.style.backgroundColor = "red";
+        // }
+
+    </script>
+</body>
+
+</html>

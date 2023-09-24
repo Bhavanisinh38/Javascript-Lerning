@@ -1,0 +1,66 @@
+@font-face {
+    font-family: Quicksand;
+    src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("/fonts/fontawesome-webfont.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body > *{
+    font-weight: 900;
+    text-shadow: 0 0 11px red;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px red;
+}
+
+.main-section h2{
+    font-size: 36px;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    margin: 5px 0;
+}

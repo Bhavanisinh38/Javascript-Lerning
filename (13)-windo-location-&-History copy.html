@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site Title -->
+    <title>Window Location & History Methods</title>
+
+    <!-- Site Css Links -->
+    <style>
+        @font-face {
+            font-family: Quicksand;
+            src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+        }
+
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url("/fonts/fontawesome-webfont.woff2") format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *:not(.fa) {
+            font-family: 'Quicksand', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .d-none{
+            display: none;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #fcfcfc;
+        }
+
+        body.hactive{
+            height: calc(100vh + 5000px);
+        }
+
+        body.wactive{
+            width: calc(100vw + 5000px);
+        }
+
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 15px 8px 15px;
+            background: transparent;
+            border-radius: 5px;
+            color: rgb(0 0 0);
+            font-weight: 600;
+            font-size: 24px;
+            background: #212668;
+        }
+
+        button:hover {
+            background: #212668;
+            /* color: white; */
+        }
+
+        button:active {
+            background: #216823;
+            color: white;
+        }
+
+        .fixed-btn {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+        }
+
+        .text-box{
+            width: 800px;
+            height: 400px;
+            border: 1px solid red;
+            overflow: auto;
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        .text-box.active::-webkit-scrollbar{
+            display: none;
+        }
+
+        .text-inner{
+            width: 1600px;
+            height: 400px;
+            background-color: rgb(0, 166, 255);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <button id="target-btn">Click Function Btn</button>
+    
+    <p class="d-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dignissimos sit reiciendis, quibusdam nemo optio? Et doloremque repudiandae maxime, quae adipisci, ipsam facere fuga praesentium sed quasi esse dolor assumenda amet illo autem dicta qui veritatis excepturi voluptatibus vero optio omnis! Necessitatibus ea culpa qui aut, eveniet saepe vitae reprehenderit cum hic, obcaecati consequatur quo aspernatur sit dolor illum ducimus sed itaque iste doloremque a. Ad autem temporibus natus dolores! Optio debitis autem saepe tempora rem ex quibusdam error consequuntur et ratione quia ut doloribus libero perferendis, repudiandae doloremque dolor facilis labore accusantium eum officia illum sunt. Officiis expedita quis, dignissimos possimus, totam necessitatibus asperiores accusamus hic minus fugiat distinctio! Deleniti at fugiat necessitatibus voluptate! Doloremque, iure voluptatem debitis voluptatibus rerum alias aliquid culpa eligendi tempore fugit! Rem dicta, aut labore obcaecati animi at perspiciatis laboriosam sit odit saepe eveniet ipsa officia ea! Labore voluptates officiis soluta accusantium dolore, iste aperiam possimus est expedita asperiores, reiciendis ab recusandae assumenda molestias error voluptatum quia facere aut, nobis amet? Saepe animi vel ratione nemo recusandae, error ut ad cum laboriosam fuga atque corrupti possimus maiores harum delectus id consequatur culpa natus sit. Sequi beatae assumenda magnam nostrum, explicabo dolorum veniam libero qui facere sit totam dolorem doloribus praesentium quasi, blanditiis fugit illum. Vel, qui illum veritatis blanditiis, assumenda quaerat magni, nam doloremque voluptas hic beatae. Ipsam quia doloribus nostrum quo mollitia sit quas, voluptatum ullam corporis dolorem dicta suscipit quidem quaerat facilis voluptates, atque inventore possimus magni. Dolorem exercitationem sunt aliquam provident quo ab doloremque maiores. Similique ab ipsam optio minima. Fugiat, a harum! Quasi voluptatibus rem ipsam dolorum atque sequi, laudantium consectetur, vitae sunt perspiciatis ipsum veniam dolores nobis voluptates fugiat quisquam animi labore voluptatum sint vel deserunt cum! Repellendus libero unde, minima itaque quis deleniti numquam mollitia laborum incidunt delectus nam, esse consequatur eos dicta voluptate totam? Non quis repellat velit eius autem, porro aspernatur, at deserunt minima architecto earum? Eius quia nulla minus quod maiores optio a esse, consequuntur officia veritatis soluta obcaecati harum, alias autem natus qui! Provident adipisci enim perferendis aut ipsa, cum est perspiciatis optio veritatis reprehenderit expedita, accusantium illum vitae. Accusamus a eos iusto. Fugit doloribus facere ex quas nisi illum. Commodi atque voluptate minus quo earum nostrum maiores natus similique quos recusandae tempore saepe dolorem magnam, harum tenetur! Id sit consequuntur, maiores aliquam eius quisquam repellat. Sunt illum deserunt exercitationem blanditiis laborum numquam quae sed, eveniet dignissimos, sint voluptates magnam repellendus nam natus sapiente ea ut soluta obcaecati architecto? Distinctio ipsam voluptatibus eos saepe nam ex placeat assumenda sequi necessitatibus facilis exercitationem, quis esse aliquid sit unde minima nobis maxime, recusandae commodi veritatis velit ipsum iste molestiae. Atque, hic eaque expedita magnam nihil rem iure nostrum nulla. Debitis, ullam? Deleniti quidem, voluptas ratione optio illo ad fugiat. At veniam qui et aspernatur, maiores, doloribus dolorum quasi nam porro corrupti ipsum. Commodi sed cupiditate recusandae provident natus sequi quaerat quis voluptas rem totam ratione vel architecto alias iste eveniet pariatur doloribus eligendi magnam illum omnis, eius obcaecati ipsam dolores. Porro, ut! Corporis maxime modi suscipit voluptates officia repudiandae in, rerum ipsa, unde eum totam facere dolorum. Veritatis optio eligendi, cum placeat quam id nobis magnam debitis earum cumque laudantium qui dolorum fugit beatae aliquam harum rem voluptatibus asperiores laborum soluta. Ex, sequi perspiciatis porro consectetur est omnis impedit, ipsa assumenda blanditiis iure eos, autem aliquid fuga ipsum modi commodi officia! Commodi, aspernatur quia ipsum, aliquid excepturi repellendus voluptatibus labore ex blanditiis, laudantium quos! Saepe libero eum excepturi, inventore non laborum magnam quae aliquid asperiores mollitia ipsam minima. Eum voluptatum, architecto ab obcaecati, cupiditate illum quo sequi, facere eligendi magni unde sed dolorem rerum earum laborum tenetur? Enim optio temporibus necessitatibus nulla? Iusto quod nesciunt ipsam doloribus, consequatur quam sint nihil sit, labore praesentium alias qui natus ab, accusantium reprehenderit ducimus facilis culpa? A porro officia commodi id aut aliquid saepe, corporis ullam quas illo vitae! Repellendus commodi ad molestiae vel harum cupiditate odio, ipsum quia, corporis at, a unde quaerat ipsa magni numquam consequatur. Ex, eum, iure consectetur ducimus cumque est odio eos ipsum a, laboriosam quo repudiandae. Praesentium sit assumenda unde, fugiat obcaecati animi non itaque debitis tempore repellat asperiores, quos minus dolores, possimus nulla ea? Rem architecto, officia facere aut temporibus numquam atque error magni cum ipsam! Omnis rem, voluptas explicabo et necessitatibus quas ea officiis sapiente modi reiciendis dolorem est similique, quidem dicta quam autem, tempora cum vitae accusantium voluptatibus ipsam numquam. Dicta, suscipit ex blanditiis doloremque ad consequuntur odio unde possimus cumque vero sint ipsa amet quia impedit aut corporis, illum labore corrupti dolore eligendi sunt, hic nulla? Placeat earum, ipsum similique id debitis soluta nulla eligendi itaque amet! Voluptatibus dolor sed illo voluptatum modi aperiam placeat aspernatur fugit porro sint! Nisi eligendi quidem, sapiente atque eius cupiditate? Vitae beatae impedit fugiat voluptatem totam maiores assumenda ipsam quidem, excepturi quam perspiciatis itaque! Maxime rerum eligendi tenetur magnam quidem quo possimus, accusamus repellat voluptate voluptatibus odio placeat est saepe vero doloribus quam distinctio pariatur et cumque officia provident quis labore optio! Qui cum libero corporis voluptate animi saepe magnam dolor dolorem molestiae fugiat aspernatur enim, at numquam expedita totam, neque, id ducimus earum recusandae tempora? Tempora voluptatem voluptatibus dolorem saepe cum itaque illo natus exercitationem eum. Voluptatibus ab, delectus, earum ut itaque totam nisi numquam inventore, ducimus possimus fugiat laborum doloribus velit distinctio nobis explicabo praesentium illum perspiciatis? Dolorum ullam recusandae commodi delectus! Non quasi amet magnam doloremque possimus maiores ullam ratione reprehenderit! Optio dicta libero similique in voluptatem. Sequi tempore ducimus culpa ullam, reiciendis totam fugit excepturi quas quo asperiores et consequatur iusto nobis doloribus accusamus nihil nesciunt perferendis delectus! Eligendi alias quae repellendus iure eveniet culpa veritatis nisi aliquam est modi fugit aperiam laboriosam, perspiciatis illum quas deserunt eaque, iusto recusandae consequatur expedita libero! Blanditiis, totam? Iusto, quas. Expedita modi officia et voluptates illum eveniet harum quos quas odit adipisci id molestiae quae ducimus earum consequuntur asperiores, dolore nesciunt voluptatibus error ex blanditiis? Recusandae saepe consequatur non vitae suscipit animi sit quisquam illum dolores minima numquam sunt, iure incidunt, possimus, culpa accusantium molestiae neque in assumenda ipsa consectetur atque! Dolorum, recusandae ullam. Minima nulla odit ab nisi quo, ullam iusto at ea commodi, provident, voluptatum suscipit cumque distinctio totam voluptates. Impedit non reprehenderit velit, nihil at beatae officiis assumenda modi, soluta, ad magni iusto sequi. Cumque sunt dolor officiis, cum soluta, enim voluptates harum molestiae corrupti ratione nam laborum debitis velit dignissimos nemo minus aut aspernatur at dolore esse voluptatum optio tempora? Alias ad architecto quaerat ipsa debitis quidem hic aliquam! Soluta exercitationem error, cum dolor aperiam ducimus, asperiores animi eum, at temporibus quam libero vitae saepe sit? Obcaecati adipisci autem ad, et minima, enim commodi officiis modi error placeat illo illum. Animi libero quod voluptatum, quidem quis illo soluta delectus aliquam, nobis officia iusto debitis tenetur natus atque cumque odio aperiam, esse error veritatis voluptate. Aliquam amet natus voluptatum sint laborum, perspiciatis neque nam! Consequatur pariatur aut deserunt atque eaque numquam ipsam sequi corrupti eum provident impedit, porro veritatis eos suscipit at voluptatum obcaecati ex? Maxime, molestiae. Recusandae, modi laboriosam similique ducimus repudiandae non temporibus ipsa quia eius, eum perferendis voluptate deserunt reprehenderit distinctio qui quisquam cumque harum labore? Debitis libero iure autem, aut enim, sapiente quis consequuntur recusandae unde quidem quae delectus eum vel atque sequi fugiat quia blanditiis optio a adipisci beatae. Ab fugiat, facere odit iure alias molestiae sed. Earum magni ipsam nostrum. Quo repudiandae voluptatum reprehenderit ipsam libero inventore dolorem, eos incidunt architecto velit. Soluta eveniet dignissimos ipsum blanditiis corporis a perferendis, eum ab optio laboriosam magni necessitatibus molestias nemo autem fuga, at magnam tempora? Placeat voluptates amet, voluptatum aspernatur distinctio alias sapiente quod vel natus ipsam. Possimus dolorem fugiat nesciunt quia fuga minus hic cum mollitia? Voluptates, ipsam? Ducimus perspiciatis delectus doloremque voluptate blanditiis quidem est facilis natus? Voluptatum molestias voluptates consectetur dolore vitae quibusdam optio placeat praesentium nihil, at temporibus dignissimos expedita eos rem. Ea dolorem doloremque voluptatibus perferendis ex architecto unde tempore nostrum nam saepe, cupiditate pariatur corrupti velit at cumque atque laborum vitae placeat perspiciatis. Quidem reiciendis commodi ad id excepturi architecto in voluptates aut doloribus nisi voluptatum voluptatibus, odio aperiam eligendi illo ab ipsam rem nobis atque blanditiis dignissimos molestiae qui vel laboriosam? Culpa nesciunt eaque reprehenderit, alias quos voluptates veniam ut ipsum at illo id quae placeat quas perferendis voluptatum fugiat nam omnis, modi dignissimos accusantium repudiandae laudantium laboriosam? Eligendi omnis laboriosam reiciendis unde inventore molestiae vero consequuntur ex facilis voluptatem qui, quaerat sapiente ad atque commodi dignissimos! Repudiandae cum libero iusto provident officiis iste id rerum ipsa iure nemo, nostrum aliquid dolore cupiditate nam doloribus odit laboriosam obcaecati accusantium nihil cumque, maiores reiciendis perspiciatis sed non. Similique debitis temporibus minima doloribus quae ipsam cupiditate maxime id nam, totam nemo, tempora animi nostrum quisquam ducimus quas tempore quidem perferendis architecto dolorem error iusto quasi voluptates repellat. Quaerat esse est, sapiente amet sunt harum veniam perferendis debitis delectus facilis quo corporis aliquam obcaecati maiores eum veritatis, tempore quidem architecto molestiae maxime voluptatibus tempora officiis. Quae unde quo repudiandae cupiditate tenetur! Vel cumque voluptate perspiciatis rem. Blanditiis eaque voluptas repellendus optio, tempora at modi mollitia corrupti quia, natus quisquam quasi, libero veniam dignissimos assumenda! Dignissimos minus tenetur eligendi quod explicabo nobis nihil. Quidem eveniet doloremque, laudantium culpa id quae nisi veritatis excepturi nobis nemo repellendus architecto libero? Quasi ullam totam expedita modi dolorem exercitationem mollitia repudiandae ea excepturi ipsam maxime, dignissimos nihil ducimus inventore aut tempora sapiente voluptatem temporibus iste quia. Saepe magnam iste ipsam, sit rem autem, rerum iusto harum inventore labore, aspernatur ipsum consequatur pariatur iure sapiente reiciendis veniam quae ullam amet? Eaque delectus architecto sapiente nam tempora. Laborum praesentium perspiciatis animi dicta corrupti natus, aut beatae saepe sed. Unde accusamus fugiat velit illum cupiditate eum minus magni deserunt ut debitis dolores, cumque hic? Commodi hic perferendis quos nobis natus nesciunt iusto? Magnam eligendi labore ipsam saepe vel sit blanditiis sapiente, ad quisquam at sed necessitatibus molestiae dicta commodi aliquid fuga porro sequi veniam repellendus. Est repellat doloremque rem ipsa? Esse neque ipsam explicabo vel rerum praesentium maiores temporibus fugiat exercitationem, aperiam itaque adipisci pariatur accusamus, ipsa facilis. Provident tenetur accusamus id nesciunt soluta sunt similique, facere aliquid quo non eaque alias sequi reiciendis at adipisci, inventore vitae eos itaque temporibus dolor totam. Ullam necessitatibus, laboriosam reprehenderit temporibus dolorum ut ab quae non modi molestiae expedita nostrum sapiente unde adipisci incidunt quia possimus explicabo ratione voluptatum earum. Earum provident deleniti sed odit obcaecati voluptas ipsum expedita laborum nisi voluptatem magni quidem esse repellat a cupiditate soluta, illo voluptates praesentium vitae natus quos. Labore quis recusandae est quo facere dolor, odit omnis vero exercitationem et aliquid ipsum animi dicta itaque obcaecati blanditiis. Illum repellendus fuga nemo molestiae pariatur quae enim? Aliquam incidunt labore, tempore animi maiores possimus excepturi iure! Laborum excepturi maxime ea possimus optio eligendi et, iure tenetur error magnam vel perspiciatis repellendus culpa sapiente quibusdam, aspernatur harum autem odio! Nostrum, error? Quidem facilis dolorum tempora perferendis voluptatibus porro iusto, commodi nemo ut exercitationem! Labore in sapiente error perspiciatis iure, sed ad officia quas, pariatur velit porro qui. Ex fuga voluptatibus est veniam totam, dignissimos soluta officia doloribus sapiente esse, dolorem aspernatur natus magnam quas voluptatem error, quo debitis dolore sunt vero exercitationem! Suscipit a optio voluptas tempora quae ipsa vitae consequatur porro hic, laborum ea impedit mollitia, quibusdam aspernatur facilis corporis eos itaque dolorum in? Ratione commodi ut ea possimus saepe tempora doloremque natus asperiores, neque expedita blanditiis ab alias voluptas nisi debitis cupiditate deleniti facilis aperiam pariatur velit! Suscipit, non? A voluptas quia numquam repellendus cum nemo quisquam pariatur eveniet cupiditate, deleniti fugiat, eum reiciendis consequatur? Et, soluta nobis fugiat sequi iure, itaque eius, molestiae nihil illo iste ducimus excepturi necessitatibus neque corporis! Nesciunt placeat ea ex nisi numquam, nostrum obcaecati perferendis deserunt alias dolorum praesentium nam tempora quia dignissimos aperiam a quisquam quae doloribus ut exercitationem blanditiis qui excepturi, distinctio sequi! Alias vitae sed perferendis? Dignissimos maxime rerum beatae dolorum inventore provident numquam suscipit assumenda odit.</p>
+
+    <!-- <section class="text-box">
+        <div class="text-inner"></div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. In eaque ratione sed, explicabo accusamus dignissimos adipisci itaque nostrum ipsa delectus vel praesentium quam eligendi, aliquam voluptatibus repellendus doloribus aliquid a reiciendis pariatur magnam laborum provident. Porro quidem consectetur consequuntur ducimus labore veritatis temporibus, repudiandae facere eveniet eum maiores nulla quod quae.
+    </section> -->
+
+    <script>
+        // Brower Location Object
+        // -------------------------------------------------- //
+        //    console.log(location.ancestorOrigins);
+        //    console.log(location.hash);
+        //    console.log(location.host);
+        //    console.log(location.hostname);
+        //    console.log(location.href);
+        //    console.log(location.origin);
+        //    console.log(location.pathname);
+        //    console.log(location.port);
+        //    console.log(location.protocol);
+
+        //    console.log(location.assign());
+        //    console.log(location.reload());
+        //    console.log(location.replace());
+
+        
+        // document.getElementById("target-btn").addEventListener("click", location_click);
+        // function location_click() {
+            // location.reload();
+            // location.assign("https://salangpurhanumanji.org/");
+            // location.replace("https://salangpurhanumanji.org/");
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // Brower History Object Methods (Back || Forward == GO)
+        // -------------------------------------------------- //
+
+        // document.getElementById("target-btn").addEventListener("click", history_click);
+        // function history_click(){
+        //     document.getElementsByClassName("text")[0].innerHTML = history.length;
+        // }
+
+        // 
+        // document.getElementById("target-btn").addEventListener("click", history_click);
+        // function history_click(){
+        //     // history.back();
+        //     // history.forward();
+        //     // history.go(1); // Numbers Valid
+        // }
+        
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // pageYOffset & pageXOffset
+        // -------------------------------------------------- //
+
+        // --- PageYoffset ---
+        // document.getElementsByTagName("body")[0].classList.add("hactive");
+        // document.getElementById("target-btn").classList.add("fixed-btn");
+        // window.addEventListener("scroll", scroll_check);
+        // function scroll_check() {
+        //     document.getElementById("target-btn").innerHTML = window.pageYOffset;
+        //     if (window.pageYOffset > 1000) {
+        //         document.getElementsByTagName("body")[0].style.backgroundColor = 'red';
+        //     } else {
+        //         document.getElementsByTagName("body")[0].style.backgroundColor = 'white';
+        //     }
+        // }
+
+        // --- PageXoffset ---
+        // document.getElementsByTagName("body")[0].classList.add("wactive");
+        // document.getElementById("target-btn").classList.add("fixed-btn");
+        // window.addEventListener("scroll", scroll_check);
+        // function scroll_check() {
+        //     document.getElementById("target-btn").innerHTML = window.pageXOffset;
+        //     if (window.pageXOffset > 1000) {
+        //         document.getElementsByTagName("body")[0].style.backgroundColor = 'red';
+        //     } else {
+        //         document.getElementsByTagName("body")[0].style.backgroundColor = 'white';
+        //     }
+        // }
+
+        
+        // ------------------------------------------------------------------------------------------
+
+
+        // offsetTop & offsetLeft
+        // document.getElementById("target-btn").addEventListener("click", offset_check);
+        // function offset_check() {
+        //     document.getElementById("target-btn").innerHTML = this.offsetTop +", "+ this.offsetLeft;
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // scrollTop & scrollLeft
+        // let stl_box = document.getElementsByClassName("text-box")[0];
+        // stl_box.addEventListener("scroll", offset_stl);
+        // function offset_stl() {
+        //     document.getElementById("target-btn").innerHTML = this.scrollTop +", "+ this.scrollLeft;
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // scrollWidth & scrollHeight
+        // let swh_box = document.getElementsByClassName("text-box")[0];
+        // swh_box.addEventListener("scroll", offset_swh);
+        // function offset_swh() {
+        //     document.getElementById("target-btn").innerHTML = this.scrollWidth +", "+ this.scrollHeight;
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // offsetWidth & offsetHeight 
+        // document.getElementsByClassName("text-box")[0].style.padding = "10px";
+        // document.getElementsByClassName("text-box")[0].style.border = "5px solid red";
+        // let sowh_box = document.getElementsByClassName("text-box")[0];
+        // sowh_box.addEventListener("scroll", offset_sowh);
+        // function offset_sowh() {
+        //     document.getElementById("target-btn").innerHTML = this.offsetWidth +", "+ this.offsetHeight;
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // clientWidth & clientHeight 
+        // document.getElementsByClassName("text-box")[0].style.padding = "10px";
+        // document.getElementsByClassName("text-box")[0].style.border = "15px solid red";
+        // // document.getElementsByClassName("text-box")[0].classList.add("active");
+        // let scwh_box = document.getElementsByClassName("text-box")[0];
+        // scwh_box.addEventListener("scroll", offset_scwh);
+        // function offset_scwh() {
+        //     document.getElementById("target-btn").innerHTML = this.clientWidth +", "+ this.clientHeight;
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // clientX & clientY
+        // let scxy_box = document.getElementsByTagName("body")[0];
+        // scxy_box.addEventListener("mousemove", offset_scxy);
+        // function offset_scxy(e) {
+        //     document.getElementById("target-btn").innerHTML = e.clientX +", "+ e.clientY;
+        //     document.getElementsByTagName("button")[0].style.position = "absolute";
+        //     document.getElementsByTagName("button")[0].style.left = e.clientX + "px";
+        //     document.getElementsByTagName("button")[0].style.top = e.clientY + "px";
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // pageX & pageY
+        // document.getElementsByTagName("p")[0].classList.remove("d-none");
+        // let spxy_box = document.getElementsByTagName("body")[0];
+        // spxy_box.addEventListener("mousemove", offset_spxy);
+        // function offset_spxy(e) {
+        //     document.getElementById("target-btn").innerHTML = e.pageX +", "+ e.pageY + " | " + e.clientX +", "+ e.clientY;
+        //     document.getElementsByTagName("button")[0].style.position = "absolute";
+        //     document.getElementsByTagName("button")[0].style.left = e.pageX + "px";
+        //     document.getElementsByTagName("button")[0].style.top = e.pageY + "px";
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // screenX & screenY
+        // let saxy = document.getElementsByTagName("body")[0];
+        // saxy.addEventListener("mousemove", saxy_function);
+        // function saxy_function(e) {
+        //     document.getElementById("target-btn").innerHTML = e.screenX +", "+ e.screenY + " | " + e.clientX +", "+ e.clientY;
+        // }
+
+
+        // ------------------------------------------------------------------------------------------
+
+
+        // offsetX & offsetY
+        let soxy = document.getElementsByTagName("button")[0];
+        soxy.addEventListener("mousemove", soxy_function);
+        function soxy_function(e) {
+            document.getElementById("target-btn").innerHTML = e.offsetX +", "+ e.offsetY + " | " + e.clientX +", "+ e.clientY;
+        }
+        
+    </script>
+</body>
+
+</html>

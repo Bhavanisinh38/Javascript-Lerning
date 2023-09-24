@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Site Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site Title -->
+    <title>Bowers Object Modal Methods</title>
+
+    <!-- Site Css Links -->
+    <style>
+        @font-face {
+            font-family: Quicksand;
+            src: url("/fonts/Quicksand-VariableFont_wght.ttf");
+        }
+
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url("/fonts/fontawesome-webfont.woff2") format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        *:not(.fa){
+            font-family: 'Quicksand', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(100vw + 1000px);
+            height: calc(100vh + 1000px);
+            background-color: #fcfcfc;
+        }
+
+        button{
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 10px 8px 10px;
+            background: transparent;
+            border-radius: 5px;
+            color: rgb(0 0 0);
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        button:hover{
+            background: #212668;
+            color: white;
+        }
+
+        button:active{
+            background: #216823;
+            color: white;
+        }
+
+        #rtbw-btn{
+            position: fixed;
+            left: 20px;
+            top: 20px;
+        }
+    </style>
+    
+</head>
+<body onresize="resizefuntion()">
+    
+    <button id="target-btn">Windo Open Function</button>
+    <button id="wc-btn">Windos Close Function</button>
+    <button id="mtbw-btn">Windos Move To & by Function</button>
+    <button id="rtbw-btn">Windos Resize To & by Function</button>
+
+
+    <script>
+        // InnerHeight || OuterHeight || Innerwidth & Outerwidth
+        // -------------------------------------------------- //
+        // function resizefuntion(){
+        //     console.clear();
+        //     let IHeight = window.innerHeight;
+        //     let IWidth = window.innerWidth;
+        //     let OHeight = window.outerHeight;
+        //     let OWidth = window.outerWidth;
+        //     console.log("InnerHeight : " + IHeight);
+        //     console.log("Innerwidth : " + IWidth);
+        //     console.log("OuterHeight : " + OHeight);
+        //     console.log("Outerwidth : " + OWidth);
+
+        //     let width_gap = OWidth - IWidth;
+        //     console.log("Width Gap : " + width_gap);
+
+        //     let height_gap = OHeight - IHeight;
+        //     console.log("Height Gap : " + height_gap);
+        // }
+
+        // Windo Open & Close
+        // --------------- //
+        // let mywindo;
+        // document.getElementById("target-btn").addEventListener("click", targetclick);
+        // function targetclick() {
+        //     // window.open("URL","Name","specs")
+        //     //01 URL = Website Full Link Add
+        //     //02 Name = website Name (or) _blank || _parent || _self && _top
+        //     //03 Specs = width || Height || top || left
+        //     // mywindo = window.open();
+        //     // mywindo = window.open("https://tripbuddy.co.in/","_blank","Width=100px,height=100px,top=50px,left=50px");
+
+        //     // Example For Move Functions
+        //     mywindo = window.open("","","Width=200px,height=200px,top=50px,left=50px");
+        //     mywindo.document.write("Check")
+        // }
+
+        // document.getElementById("wc-btn").addEventListener("click", wcclick);
+        // function wcclick() {
+        //     mywindo.close();
+        // }
+
+        // Windo moveTo & moveBy
+        // --------------- //
+        // document.getElementById("mtbw-btn").addEventListener("click", mtbwclick);
+        // function mtbwclick(){
+        //     // mywindo.moveTo(0,100);
+        //     mywindo.moveBy(0,100);
+        //     mywindo.focus();
+        // }
+
+        // Windo resizeTo & resizeBy
+        // --------------- //
+        // document.getElementById("rtbw-btn").addEventListener("click", rtbwclick);
+        // function rtbwclick(){
+        //     // mywindo.resizeTo(400,200);
+        //     mywindo.resizeBy(400,200);
+        //     mywindo.focus();
+        // }
+
+        // Windo resizeTo & resizeBy
+        // --------------- //
+        // document.getElementById("rtbw-btn").addEventListener("click", rtbwclick);
+        // function rtbwclick(){
+        //     // window.scrollBy(10,20);
+        //     // window.scrollBy(-10,-20);
+
+        //     // window.scrollTo(10,20);
+        //     window.scrollTo(-10,-20);
+        // }   
+    </script>
+</body>
+</html>
